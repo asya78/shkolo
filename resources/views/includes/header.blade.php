@@ -7,7 +7,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ route('button.create') }}">Add button</a></li>
+                <!--<li><a href="{{ route('button.create') }}">Add button</a></li>-->
             </ul>
         </div>
     </div>

@@ -42,15 +42,21 @@ class ButtonController extends Controller
      */
     public function store(Request $request)
     {
+        $regex = '/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/';
         $this->validate($request,[
             'title'=>'required',
+            'link' => [
+                'regex:'.$regex,
+                'nullable'
+            ],
             'color'=>'required'
         ]);
         
         Button::create($request->input());
 
+        Session::flash('success','Added Button');
         
-       return redirect()->route('button.index')->with('success','Added Button');
+       return redirect()->route('button.index');
     }
 
     /**

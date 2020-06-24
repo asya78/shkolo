@@ -13,13 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','DefaultController@getHome');
+Route::get('/','ButtonController@index');
 
-Route::resource('button', 'ButtonController')->except(['index']);
+Route::resource('button', 'ButtonController');
 
-Route::get('button/{id}',function($id){
-    return view('pages.home');
-});
 
 
 
