@@ -17,6 +17,8 @@ Route::get('/','ButtonController@index');
 
 Route::resource('button', 'ButtonController');
 
+Route::redirect('/button', '/');
+
 
 
 
