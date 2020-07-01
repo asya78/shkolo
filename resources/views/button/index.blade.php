@@ -1,4 +1,4 @@
-@extends('layouts.default');
+@extends('layouts.default')
 
 @section('content')
 
@@ -32,4 +32,4 @@
 
     @endforeach
 
-@endsection
+@stop
